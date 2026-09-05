@@ -1,0 +1,397 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Your Name | Portfolio</title>
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      line-height: 1.6;
+      color: #222;
+      background: #f8f9fa;
+    }
+
+    /* Navigation */
+    header {
+      background: #111827;
+      color: white;
+      padding: 18px 8%;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+
+    nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .logo {
+      font-size: 24px;
+      font-weight: bold;
+    }
+
+    nav ul {
+      list-style: none;
+      display: flex;
+      gap: 25px;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      transition: color 0.3s;
+    }
+
+    nav a:hover {
+      color: #60a5fa;
+    }
+
+    /* Common */
+    section {
+      padding: 80px 8%;
+    }
+
+    .container {
+      max-width: 1100px;
+      margin: auto;
+    }
+
+    .section-title {
+      text-align: center;
+      font-size: 32px;
+      margin-bottom: 40px;
+      color: #111827;
+    }
+
+    /* Hero */
+    #home {
+      min-height: 90vh;
+      display: flex;
+      align-items: center;
+      background: linear-gradient(135deg, #eff6ff, #ffffff);
+    }
+
+    .hero {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 50px;
+    }
+
+    .hero-text {
+      flex: 1;
+    }
+
+    .hero-text h1 {
+      font-size: 52px;
+      color: #111827;
+      margin-bottom: 10px;
+    }
+
+    .hero-text h2 {
+      font-size: 25px;
+      color: #2563eb;
+      margin-bottom: 20px;
+    }
+
+    .hero-text p {
+      color: #555;
+      max-width: 550px;
+      margin-bottom: 25px;
+    }
+
+    .btn {
+      display: inline-block;
+      background: #2563eb;
+      color: white;
+      padding: 12px 25px;
+      border-radius: 6px;
+      text-decoration: none;
+      transition: background 0.3s;
+    }
+
+    .btn:hover {
+      background: #1d4ed8;
+    }
+
+    .profile {
+      width: 280px;
+      height: 280px;
+      border-radius: 50%;
+      background: #dbeafe;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 80px;
+    }
+
+    /* About */
+    #about {
+      background: white;
+    }
+
+    .about-text {
+      max-width: 750px;
+      margin: auto;
+      text-align: center;
+      color: #555;
+    }
+
+    /* Skills */
+    .skills {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 15px;
+    }
+
+    .skill {
+      background: #e0ecff;
+      color: #1d4ed8;
+      padding: 12px 20px;
+      border-radius: 20px;
+      font-weight: bold;
+    }
+
+    /* Projects */
+    #projects {
+      background: #f8f9fa;
+    }
+
+    .projects {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 25px;
+    }
+
+    .project {
+      background: white;
+      padding: 25px;
+      border-radius: 10px;
+      box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+      transition: transform 0.3s;
+    }
+
+    .project:hover {
+      transform: translateY(-5px);
+    }
+
+    .project h3 {
+      margin-bottom: 10px;
+      color: #111827;
+    }
+
+    .project p {
+      color: #666;
+      margin-bottom: 15px;
+    }
+
+    .project a {
+      color: #2563eb;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    /* Contact */
+    #contact {
+      background: white;
+      text-align: center;
+    }
+
+    .contact-info {
+      color: #555;
+      margin-bottom: 25px;
+    }
+
+    /* Footer */
+    footer {
+      background: #111827;
+      color: white;
+      text-align: center;
+      padding: 20px;
+    }
+
+    /* Responsive */
+    @media (max-width: 768px) {
+      nav {
+        flex-direction: column;
+        gap: 15px;
+      }
+
+      nav ul {
+        gap: 15px;
+        flex-wrap: wrap;
+        justify-content: center;
+      }
+
+      .hero {
+        flex-direction: column-reverse;
+        text-align: center;
+      }
+
+      .hero-text h1 {
+        font-size: 40px;
+      }
+
+      .profile {
+        width: 200px;
+        height: 200px;
+        font-size: 60px;
+      }
+
+      .projects {
+        grid-template-columns: 1fr;
+      }
+
+      section {
+        padding: 60px 6%;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- Navigation -->
+  <header>
+    <nav>
+      <div class="logo">YourName</div>
+
+      <ul>
+        <li><a href="#home">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Hero -->
+  <section id="home">
+    <div class="container hero">
+
+      <div class="hero-text">
+        <h1>Hello, I'm Your Name</h1>
+        <h2>Web Developer</h2>
+
+        <p>
+          I create clean, modern and responsive websites.
+          I enjoy turning ideas into simple and beautiful digital experiences.
+        </p>
+
+        <a href="#projects" class="btn">View My Work</a>
+      </div>
+
+      <div class="profile">
+        👨‍💻
+      </div>
+
+    </div>
+  </section>
+
+  <!-- About -->
+  <section id="about">
+    <div class="container">
+
+      <h2 class="section-title">About Me</h2>
+
+      <p class="about-text">
+        I'm a passionate web developer interested in creating modern,
+        user-friendly websites. I love learning new technologies and
+        building projects that solve real-world problems.
+      </p>
+
+    </div>
+  </section>
+
+  <!-- Skills -->
+  <section id="skills">
+    <div class="container">
+
+      <h2 class="section-title">My Skills</h2>
+
+      <div class="skills">
+        <span class="skill">HTML</span>
+        <span class="skill">CSS</span>
+        <span class="skill">JavaScript</span>
+        <span class="skill">React</span>
+        <span class="skill">Git</span>
+        <span class="skill">Responsive Design</span>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Projects -->
+  <section id="projects">
+    <div class="container">
+
+      <h2 class="section-title">My Projects</h2>
+
+      <div class="projects">
+
+        <div class="project">
+          <h3>Portfolio Website</h3>
+          <p>
+            A responsive personal portfolio website built using HTML and CSS.
+          </p>
+          <a href="#">View Project →</a>
+        </div>
+
+        <div class="project">
+          <h3>Landing Page</h3>
+          <p>
+            A modern landing page designed for a fictional business.
+          </p>
+          <a href="#">View Project →</a>
+        </div>
+
+        <div class="project">
+          <h3>Todo App</h3>
+          <p>
+            A simple task management application with a clean interface.
+          </p>
+          <a href="#">View Project →</a>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Contact -->
+  <section id="contact">
+    <div class="container">
+
+      <h2 class="section-title">Contact Me</h2>
+
+      <p class="contact-info">
+        Have a project or opportunity? Feel free to get in touch.
+      </p>
+
+      <a href="mailto:youremail@example.com" class="btn">
+        Email Me
+      </a>
+
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <p>© 2026 Your Name. All rights reserved.</p>
+  </footer>
+
+</body>
+</html>
